@@ -1,9 +1,8 @@
-package ir.sepehrpour.wallpaperfun
+package ir.sepehrpour.wallpaperfun.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import ir.sepehrpour.wallpaperfun.databinding.ActivitySplashBinding
 import java.util.Timer
 import kotlin.concurrent.timerTask

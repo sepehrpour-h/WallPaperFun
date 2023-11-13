@@ -2,4 +2,5 @@
 <resources>
     <dimen name="large_text">30sp</dimen>
     <dimen name="normal_text">20sp</dimen>
+    <dimen name="margin_large">12sp</dimen>
 </resources>
