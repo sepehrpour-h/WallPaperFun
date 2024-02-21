@@ -4,15 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.MainActivity"
+    android:background="@color/white">
 
-    <TextView
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middle_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.01"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"/>
+
+    <View
+        android:id="@+id/view_main"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/middle_main"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="12dp"
+        android:text="@string/title_app"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/iransansweb"
+        app:layout_constraintTop_toTopOf="@+id/view_main"
+        app:layout_constraintBottom_toTopOf="@+id/middle_main"
+        app:layout_constraintStart_toEndOf="@+id/start_main"
+        app:layout_constraintEnd_toStartOf="@+id/end_main"/>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/menu_icon"
+        app:layout_constraintEnd_toStartOf="@+id/end_main"
+        app:layout_constraintTop_toBottomOf="@+id/top_main"
+        app:layout_constraintBottom_toTopOf="@id/middle_main"
+        android:contentDescription="hamburger_menu" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
