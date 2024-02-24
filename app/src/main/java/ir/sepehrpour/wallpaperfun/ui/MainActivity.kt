@@ -10,3 +10,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 }
+
+fun Slider (){
+    val images = listOf(
+        R.drawable.image1,
+        R.drawable.image2,
+        R.drawable.image3
+    )
+
+    val viewPager: ViewPager = findViewById(R.id.viewPager)
+    val adapter = SliderAdapter(supportFragmentManager, images)
+    viewPager.adapter = adapter
+}
